@@ -3,12 +3,12 @@ import { AppComponent } from './app.component';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: AppComponent,
   },
 
   {
-    path: 'quiz',
+    path: '',
     loadComponent: () =>
       import('./simple-quiz/simple-quiz.component').then(
         (c) => c.SimpleQuizComponent
