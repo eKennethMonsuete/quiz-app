@@ -43,7 +43,7 @@ export class SimpleQuizComponent implements OnInit {
     this.quizService.getQuestions().subscribe(
       (data) => {
         this.questions = data;
-        console.log('questoes carregadas', this.questions); // Verificando se as questões foram carregadas corretamente
+        // console.log('questoes carregadas', this.questions); // Verificando se as questões foram carregadas corretamente
       },
       (error) => {
         console.error('Erro ao carregar as questões:', error);
