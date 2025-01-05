@@ -1,0 +1,76 @@
+<div class="quiz-container" *ngIf="!showResults">
+  <h2>Pergunta {{ currentQuestionIndex + 1 }} de {{ questions.length }}</h2>
+
+  <!-- Exibindo a questão -->
+  <p-card>
+    <ng-template pTemplate="header">
+      <h3>{{ questions[currentQuestionIndex]?.enunciado }}</h3>
+    </ng-template>
+
+    <ng-template pTemplate="content">
+      <ul>
+        <li
+          *ngFor="
+            let option of questions[currentQuestionIndex]?.alternatives;
+            let i = index
+          "
+        >
+          <button
+            pButton
+            [raised]="true"
+            severity="secondary"
+            type="button"
+            label="{{ option }}"
+            [class.selected]="selectedAnswerIndex === i"
+            [class.correct]="
+              isAnswerChecked &&
+              i === questions[currentQuestionIndex].correctAnswer
+            "
+            [class.incorrect]="
+              isAnswerChecked &&
+              selectedAnswerIndex === i &&
+              i !== questions[currentQuestionIndex].correctAnswer
+            "
+            (click)="selectAnswer(i)"
+          ></button>
+        </li>
+      </ul>
+
+      <!-- Botão para verificar a resposta -->
+      <p-button
+        [rounded]="true"
+        severity="success"
+        label="Verificar Resposta"
+        [disabled]="selectedAnswerIndex === null"
+        (click)="checkAnswer()"
+      ></p-button>
+
+      <p *ngIf="isAnswerChecked">
+        <strong>Explicação: </strong>
+        {{ questions[currentQuestionIndex]?.explanation }}
+      </p>
+
+      <!-- Botão para ir à próxima questão -->
+      <p-button
+        [rounded]="true"
+        severity="warn"
+        label="Próxima"
+        [disabled]="!isAnswerChecked"
+        (click)="nextQuestion()"
+      ></p-button>
+    </ng-template>
+  </p-card>
+</div>
+
+<!-- Exibindo os resultados -->
+<div class="results-container" *ngIf="showResults">
+  <h2>Resultados</h2>
+  <p>
+    Você acertou <strong>{{ score }}</strong> de
+    <strong>{{ questions.length }}</strong> perguntas.
+  </p>
+  <p>
+    Você errou <strong>{{ questions.length - score }}</strong> perguntas.
+  </p>
+  <p-button label="Reiniciar Quiz" (click)="restartQuiz()"></p-button>
+</div>

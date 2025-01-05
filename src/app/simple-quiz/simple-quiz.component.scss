@@ -1,0 +1,25 @@
+/* Estilos para o quiz */
+.quiz-container {
+  .selected {
+    background-color: #e0f7fa; /* Azul claro quando a opção é selecionada */
+  }
+
+  .correct {
+    background-color: #4caf50; /* Verde para a resposta correta */
+    color: white;
+  }
+
+  .incorrect {
+    background-color: #f44336; /* Vermelho para a resposta errada */
+    color: white;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .results-container {
+    margin-top: 20px;
+  }
+}

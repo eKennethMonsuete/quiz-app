@@ -1,0 +1,35 @@
+[
+    {
+        "enunciado": "Compete a Comissão de Valores Mobiliários:",
+        "alternatives": [
+            "Proteger as empresas S.A de Capital Aberto.",
+            "Fixar limites de comissões e emolumentos.",
+            "Fiscalizar os Bancos.",
+            "Realizar operações de redesconto."
+        ],
+        "correctAnswer": 1,
+        "explanation": "A CVM é responsável por fixar limites de comissões e emolumentos."
+    },
+    {
+        "enunciado": "Entre as atribuições da SUSEP, uma das entidades supervisoras do Sistema Financeiro Nacional, podemos citar:",
+        "alternatives": [
+            "Fiscalizar as operações das sociedades de capitalização, seguro, resseguro e Previdência Complementar Fechada.",
+            "Fixar e implementar as diretrizes e normas do mercado de valores mobiliários.",
+            "Zelar pela defesa de compradores de seguro, ou seja, dos segurados.",
+            "Disciplinar o Crédito em todas as modalidades."
+        ],
+        "correctAnswer": 2,
+        "explanation": "A SUSEP tem como atribuição zelar pela defesa dos compradores de seguro."
+    },
+    {
+        "enunciado": "Uma das atribuições do Banco Central é:",
+        "alternatives": [
+            "Emitir papel moeda juntamente com o Conselho Monetário Nacional.",
+            "Disciplinar o crédito em todas as modalidades.",
+            "Definir a taxa de redesconto.",
+            "Estimular investimentos no mercado acionário."
+        ],
+        "correctAnswer": 2,
+        "explanation": "O Banco Central define a taxa de redesconto como parte de suas funções."
+    }
+]
