@@ -4,7 +4,7 @@
   <!-- Exibindo a questão -->
   <p-card>
     <ng-template pTemplate="header">
-      <h3>{{ questions[currentQuestionIndex]?.enunciado }}</h3>
+      <h3>{{ getEnunciado()}}</h3>
     </ng-template>
 
     <ng-template pTemplate="content">
@@ -47,7 +47,7 @@
 
       <p *ngIf="isAnswerChecked">
         <strong>Explicação: </strong>
-        {{ questions[currentQuestionIndex]?.explanation }}
+        {{ questions[currentQuestionIndex].explanation }}
       </p>
 
       <!-- Botão para ir à próxima questão -->

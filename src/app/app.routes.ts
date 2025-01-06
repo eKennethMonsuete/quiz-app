@@ -15,4 +15,5 @@ export const routes: Routes = [
       ),
     providers: [],
   },
+  { path: '**', component: AppComponent } 
 ];

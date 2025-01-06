@@ -61,6 +61,12 @@ export class SimpleQuizComponent implements OnInit {
     }
   }
 
+  getEnunciado(): string{
+      if(this.questions && this.questions[this.currentQuestionIndex] && this.questions[this.currentQuestionIndex].enunciado)
+        return this.questions[this.currentQuestionIndex].enunciado;
+      return ""
+  }
+
   // Selecionar uma alternativa
   selectAnswer(index: number): void {
     this.selectedAnswerIndex = index;
